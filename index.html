@@ -9,11 +9,7 @@
         body {
             background-color: #C0DFFC;
         }
-        img{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        
         .icons {
             width: 55px;
             height: 55px;
@@ -35,12 +31,51 @@
             box-sizing: border-box;
             width: 33.33%
         }
+        .container {
+            position: relative;
+            width: 50%;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            right: 0;
+            background-color: cornflowerblue;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+        }
+
+        .container:hover .overlay {
+            bottom: 0;
+            height: 100%;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
     </style>
 
 </head>
 <body>
     <h1 style="text-align: center; font-family: 'Lucida Calligraphy';">Welcome</h1>
-    <img src="" alt="profile icon" style="width:50%;">
+    img src="images/profilepicture.jpg" alt="profile icon" style="width:100px; border-radius:50%; ">
         <div class="row">
         <div class="column">
             <a href="https://www.instagram.com/nurefsan.u7/" target="_blank"><img src="images/instaIcon.jpg" class="icons" alt="Instangram Icon"></a>
@@ -57,15 +92,31 @@
         <h2 style="font-family:'Lucida Calligraphy';">About Me</h2>
         <p style="font-family:'Times New Roman';">I'm currently second year computer science student in Istanbul University-Cerrahpasa.I wanted to improve myself on coding and decided to make my own website.</p>
     </div>
-    <h2>My Interests</h2>
-    <div>
-        <h3>Reading</h3>
+    
+    <h2 style="padding-top: 50px; font-family: 'Lucida Calligraphy';">My Interests</h2>
+
+    <div class="container column">
+        <img src="images/reading.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+            <div class="text">Reading</div>
+        </div>
     </div>
-    <div>
-        <h3>Japanese</h3>
+
+    <div class="container column">
+        <img src="images/japanesee.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+            <div class="text">Learning Japanese</div>
+        </div>
     </div>
-    <div>
-        <h3>Crime Shows</h3>
+
+    <div class="container column">
+        <img src="images/crime.jpg" alt="Avatar" class="image">
+        <div class="overlay">
+            <div class="text">Crime Shows</div>
+        </div>
     </div>
+
+    <h2 style="padding-top: 50px; font-family: 'Lucida Calligraphy';">Projects</h2>
+    <p>Coming soon,<italic>hopefully</italic></p>
 </body>
 </html>
